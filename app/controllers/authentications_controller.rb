@@ -3,9 +3,20 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-    render text: request.env['omniauth.auth'].to_yaml
+    binding.pry
+    omniauth = request.env['omniauth.auth'] 
+    current_user.authentications.create(
+                                        provider: auth['proiver'],
+                                        uid: auth['uid']
+                                       )
+    flash[:notice] = 'Authentication successful.'
+    redirect_to authentications_path
   end
 
   def destroy
+  end
+
+  def facebook
+    # @user = User.find_for_facebook_oath(request.env)
   end
 end
