@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.16'
 gem 'pg'
 gem 'jquery-rails'
+gem 'omniauth'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -12,4 +14,5 @@ end
 
 group :development do
   gem 'pry'
+  gem 'nifty-generators'
 end
