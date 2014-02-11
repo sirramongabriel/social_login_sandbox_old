@@ -1,4 +1,10 @@
 SocialLoginSandbox::Application.routes.draw do
+  get "authentications/index"
+
+  get "authentications/create"
+
+  get "authentications/destroy"
+
   get "users/index"
 
   get "users/new"

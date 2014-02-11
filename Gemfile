@@ -18,3 +18,5 @@ group :development do
   gem 'pry'
   gem 'nifty-generators'
 end
+
+gem "mocha", :group => :test
